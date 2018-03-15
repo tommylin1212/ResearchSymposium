@@ -5,14 +5,21 @@ import requests
 import re
 import csv
 
-# team = input("Enter team to get record for: ")
-teamstats = open("teamstats.csv", 'w')
-
+year = input("Enter year to get record for: ")
+teamstats = open("teamstats2018.csv", 'w')
+teamstats.write(
+    "team" + "," + "win" + "," + "lose" + "," + "pointsScored" + "," + "pointsAllowed"
+    + "," + "fg" + "," + "fga" + "," + "fg2" + "," + "fg2a" + "," + "fg3" + "," + "fg3a" + "," + "ft" + ","
+    + "fta" + "," + "orb" + "," + "drb" + "," + "ast" + "," + "stl" + "," + "blk" + "," + "tov"
+    + "," + "pf" + "," + "opp_fg" + "," + "opp_fga" + "," + "opp_fg2" + "," + "opp_fg2a" + "," + "opp_fg3"
+    + "," + "opp_fg3a" + "," + "opp_ft" + "," + "opp_ft" + "," + "opp_orb" + "," + "opp_drb" + ","
+    + "opp_ast" + "," + "opp_stl" + "," + "opp_blk" + "," + "opp_tov" + "," + "opp_pf"+'\n')
 with open("teams-2018.txt") as teamsheet:
     lines = teamsheet.readlines()
     for thing in lines:
         team = thing.rstrip()
         print(team)
+
         r = requests.get("http://sports-reference.com/cbb/schools/" + team + "/2018.html")
 
         data = r.text
@@ -254,4 +261,4 @@ with open("teams-2018.txt") as teamsheet:
             + fta + "," + orb + "," + drb + "," + ast + "," + stl + "," + blk + "," + tov
             + "," + pf + "," + opp_fg + "," + opp_fga + "," + opp_fg2 + "," + opp_fg2a + "," + opp_fg3
             + "," + opp_fg3a + "," + opp_ft + "," + opp_ft + "," + opp_orb + "," + opp_drb + ","
-            + "," + opp_ast + "," + opp_stl + "," + opp_blk + "," + opp_tov + "," + opp_pf + "," + '\n')
+            + opp_ast + "," + opp_stl + "," + opp_blk + "," + opp_tov + "," + opp_pf + '\n')

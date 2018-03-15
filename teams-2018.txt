@@ -15,7 +15,6 @@ texas
 cincinnati
 georgia-state
 xavier
-north-carolina-central
 texas-southern
 missouri
 florida-state
@@ -32,7 +31,6 @@ providence
 north-carolina
 lipscomb
 villanova
-long-island-university
 radford
 alabama
 west-virginia
@@ -41,7 +39,6 @@ wichita-state
 marshall
 florida
 st-bonaventure
-ucla
 texas-tech
 stephen-f-austin
 arkansas
@@ -57,7 +54,6 @@ new-mexico-state
 auburn
 college-of-charleston
 texas-christian
-arizona-state
 syracuse
 michigan-state
 bucknell
@@ -65,3 +61,4 @@ rhode-island
 oklahoma
 duke
 iona
+virginia-tech
